@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>♥우리의 1년♥</title>
     <style>
-        /* 이서윤체 폰트 적용을 위한 코드 */
         @font-face {
             font-family: "LeeSeoyun";
             src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff") format("woff");
@@ -24,67 +23,57 @@
             background-image: url("./background.jpg");
         }
 
-        /* 너비는 390픽셀이구, 배경색이 좀 필요하고 부모(body) 높이 전체를 쓸거야 */
-
         .container {
             width: 400px;
             background-color: #379aeb;
             height: 100%;
         }
 
-        /* 위로 여유가 30픽셀 정도 있었으면 좋겠네 */
-
         .photos {
             margin-top: 30px;
         }
-
-        /* 배경은 알아보기 쉽게 흰색으로 해주고, 좌우 마진은 20픽셀 */
-        /* 상하 마진은 15픽셀로 해줘. 높이는 각 사진마다 200 픽셀로!*/
 
         .photo-frame {
             background-color: white;
             margin: 15px 20px;
             height: 200px;
+            background-size: cover;
+            position :relative;
+        }
 
+        .vedio-frame {
+            background-color: white;
+            margin: 15px 20px;
+            height: 400px;
             background-size: cover;
             position :relative;
         }
 
         .photo-description {
-            /* 배경은 검게, 글자는 흰 색으로 */
             color: white;
             background-color: black;
-
-            /* 가로 너비는 내부 콘텐츠에 딱 맞게! */
             width: fit-content;
             padding: 0 20px;
             margin-bottom: 10px;
-
-            /* 경계선 */
             border-radius: 10px;
             position: absolute;
             bottom: 0;
-
             transform: translate(-50%);
             left: 50%;
         }
 
-        /* 아래 영역 전체는, flexible하게 하되 그 내부 아이템들은 세로로 쌓을거야 */
-        /* 근데 모두 가운데 정렬 했으면 좋겠어! */
         .footer {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* 아래 영역의 제목 부분은 폰트가 좀 두껍고, 사이즈는 25픽셀! 흰색으로 */
         .f-title {
             font-size: 25px;
             font-weight: 900;
             color: white;
         }
 
-        /* 아래 영역의 날짜 부분은 폰트가 중간 두께고, 사이즈는 15픽셀! 흰색으로 */
         .f-date {
             font-size: 15px;
             font-weight: 500;
@@ -107,6 +96,7 @@
             width: 100%;
             height: 100%;
         }
+        
     </style>
 </head>
 
@@ -124,11 +114,11 @@
                 </span>
             </div>
 
-            <div class="photo-frame">
-                <!-- src : source, 즉 자료의 원천이 어디있는지를 의미해요! -->
+            <div class="vedio-frame">
+                <!--동영상만 교체해주면 끝남! -->
             	<iframe
-	            	src="https://www.youtube.com/embed/agYZbSt-3LY"
-                     frameborder="0"
+                    source src="./test.mp4" type="video/mp4" 
+                    frameborder="0"
                      class="video"
                 
 	            ></iframe>
